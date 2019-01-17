@@ -1,4 +1,4 @@
-# Face Detection Project
+# Face and Eye Detection Project
 
 To run script: 
 
