@@ -2,9 +2,9 @@
 
 To run script: 
 
-python image_capture.py -o dataset/[name]
+1. python image_capture.py -o dataset/[name]
 
-python face_detection.py
+2. python face_detection.py
 
 
 
