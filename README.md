@@ -1,6 +1,12 @@
-# gl-poc-video-surveillance
-AI video surveillance application
+<<<<<<< HEAD
+# Face and Eye Detection Project
 
-Command to run: 1. python image_capture.py -o dataset/[name]
-                
-                 2. python face_dectection.py
+To run script: 
+
+python image_capture.py -o dataset/[name]
+
+python face_detection.py
+
+>>>>>>> ab6a63e6260e345adba63a4cddadd964771ac9e1
+
+
