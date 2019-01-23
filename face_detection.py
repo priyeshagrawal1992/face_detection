@@ -21,8 +21,8 @@ labels = le.fit_transform(data["names"])
 
 # train the model used to accept the 128-d embeddings of the face and
 # then produce the actual face recognition
-print("\nModel Training Started\n")
-recognizer = SVC(C=1.5, kernel="linear", probability=True)
+print("\nStarting Model Training\n")
+recognizer = SVC(C=1.8, kernel="linear", probability=True)
 recognizer.fit(data["embeddings"], labels)
 
 # write the actual face recognition model to disk
@@ -36,6 +36,6 @@ f.write(pickle.dumps(le))
 f.close()
 
 
-print("Done training of Model, Starting face identification\n")
+print("Done Model Training, running face identification code\n")
 time.sleep(2.0)
 os.system("python final.py")

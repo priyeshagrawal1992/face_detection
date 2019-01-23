@@ -144,10 +144,10 @@ for (i, imagePath) in enumerate(imagePaths):
 
 # dump the facial embeddings + names to disk
 #print("Serializing {} encodings...".format(total))
-print("Done Processing, Run face_detection.py\n")
 data = {"embeddings": knownEmbeddings, "names": knownNames}
 f = open("output/embeddings.pickle", "wb")
 f.write(pickle.dumps(data))
 f.close()
+print("Done Processing, next run 'python face_detection.py'\n")
 cv2.destroyAllWindows()
 vs.stop()

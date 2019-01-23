@@ -32,7 +32,7 @@ le = pickle.loads(open("output/le.pickle", "rb").read())
 # initialize the video stream, then allow the camera sensor to warm up
 print("Starting Real Time Face Identification Video Streaming\n")
 print("Press 'Esc' to exit\n")
-VideoStream(src=0).stop()
+#VideoStream(src=0).stop()
 time.sleep(2.0)
 vs = VideoStream(src=0).start()
 #vs = VideoStream.start()
