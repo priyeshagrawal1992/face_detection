@@ -10,7 +10,7 @@ import imutils
 import pickle
 import time
 import cv2
-import os
+import os, sys
 
 
 ap = argparse.ArgumentParser()
@@ -48,7 +48,7 @@ while True:
 	for (x, y, w, h) in rects:
 		cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-	cv2.imshow("Frame", frame)
+	cv2.imshow("Image Capture using 'c'", frame)
 	key = cv2.waitKey(1) & 0xFF
 
 	if key == ord("c"):
