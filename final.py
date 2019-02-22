@@ -10,7 +10,7 @@ import os
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-c", "--confidence", type=float, default=0.9,help="minimum probability to filter weak detections")
+ap.add_argument("-c", "--confidence", type=float, default=0.7,help="minimum probability to filter weak detections")
 args = vars(ap.parse_args())
 
 # load serialized face and eye embedding model

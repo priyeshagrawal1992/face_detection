@@ -10,12 +10,12 @@ import imutils
 import pickle
 import time
 import cv2
-import os, sys
+import os
 
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-o", "--output", required=True, help="path to output directory")
-ap.add_argument("-c", "--confidence", type=float, default=0.4,help="minimum probability to filter weak detections")
+ap.add_argument("-c", "--confidence", type=float, default=0.7,help="minimum probability to filter weak detections")
 args = vars(ap.parse_args())
 
 if not os.path.exists(args["output"]):
@@ -48,7 +48,7 @@ while True:
 	for (x, y, w, h) in rects:
 		cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-	cv2.imshow("Image Capture using 'c'", frame)
+	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 
 	if key == ord("c"):
