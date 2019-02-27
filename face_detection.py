@@ -6,18 +6,19 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.svm import SVC
 import argparse
 import pickle
-import os, time
+import os
+import time
 
 
 # load the face embeddings
-#print("Loading face embeddings...")
+# print("Loading face embeddings...")
 data = pickle.loads(open("output/embeddings.pickle", "rb").read())
 
 # encode the labels
-#print("Encoding Labels...")
+# print("Encoding Labels...")
 le = LabelEncoder()
 labels = le.fit_transform(data["names"])
-#print(labels)
+# print(labels)
 
 # train the model used to accept the 128-d embeddings of the face and
 # then produce the actual face recognition
